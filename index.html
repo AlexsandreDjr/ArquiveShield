@@ -1,8 +1,73 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 	<head>
 		<title>ArchiveShield</title>
-		<link rel="stylesheet" href="assets\css\style.css"/>
+		<style>
+			body {
+				position: relative;
+				width: 100%;
+				height: 1024px;
+				background: #FFFFFF;}
+			#cabecalho {
+				margin: auto;
+				width: 449px;
+				height: 108px;
+				left: 495px;
+				top: 21px;}
+			#menuBG {
+				position: absolute;
+				width: 100%;
+				height: 60px;
+				left: 0px;
+				top: 136px;
+				background: #66767E;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
+			#logo {
+				position: absolute;
+				width: 108px;
+				height: 108px;
+				filter: drop-shadow(3px 4px 0px #000000);}
+			#nomePG {
+				position: absolute;
+				width: 329px;
+				height: 58px;
+				margin-left: 130px;
+				top: -25px;
+				font-family: 'Inter';
+				font-style: normal;
+				font-weight: 700;
+				font-size: 48px;
+				line-height: 58px;
+				color: #000000;
+				text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
+			#subtituloPG {
+				position: absolute;
+				width: 288px;
+				height: 29px;
+				margin-left: 150px;
+				top: 40px;
+				font-family: 'Inter';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 24px;
+				line-height: 29px;}
+			#feed {
+				box-sizing: border-box;
+				margin: auto;
+				width: 70%;
+				height: 781px;
+				margin-top: 120px;
+				background: #FFFFFF;
+				border: 0.5px solid #66767E;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
+			#login {
+				width: 300px;
+				margin-left: 20%;}
+			#cadastro {
+				width: 300px;
+				margin-left: 53%;
+				margin-top: -174px;}
+		</style>
 	</head>
 	<body>
 		<div id="cabecalho">
@@ -10,21 +75,29 @@
 			<h1 id="nomePG">ArchiveShield</h1>
 			<h2 id="subtituloPG">Compartilhando o Mundo</h2>
 		</div>
-		<div id="menuBG">
-			<ul id="menu">
-			  <li><a href="">INÍCIO</a></li>
-			  <li><a href="">MUSEUS</a></li>
-			  <li><a href="">OUTROS</a></li>
-			  <li><a href="">SOBRE</a></li>
-			  <li><a href="">PERFIL</a></li>
-			</ul>
-		</div>
+		<div id="menuBG"></div>
 		<div id="feed">
-			<form action="dados.txt">
-				<input type="text" placeholder="Publique novidades em sua linha do tempo..." id="publicar"></input><br />
-				<button>Publicar para Todos</button>
-				<button>Publicar para Assinantes</button>
-			</form>
+			<div id="login">
+				<h3 id="entrar">ENTRAR</h3>
+					<form action="home.html">
+						<input type="text" placeholder="e-mail" id="emailL"></input>
+						<input type="password" placeholder="senha"id="senhaL"></input>
+						<p id="recuperarS">Esqueceu a senha? Clique aqui!</p>
+						<button>Fazer Login</button>
+					</form>
+			</div>
+			<div id="cadastro">
+				<h3 id="cadastrar">CADASTRAR</h3>
+				<form action="home.html">
+						<input type="text" placeholder="e-mail" id="emailC"></input><br />
+						<input type="radio" name="tipoDeConta" value="Instituição">Instituição</input>
+						<input type="radio" name="tipoDeConta" value="Usuário">Usuário</input><br />
+						<input type="text" placeholder="nome" id="nomeC"></input>
+						<input type="password" placeholder="senha" id="senhaC"></input>
+						<input type="password" placeholder="repita a senha" id="senhaCR"></input><br />
+						<button>Cadastrar</button>
+					</form>
+			</div>
 		</div>
 	</body>
 </html>
