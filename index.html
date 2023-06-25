@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>ArchiveShield</title>
+		<link rel="stylesheet" href="assets/css/style2.css"/>
+	</head>
+	<body>
+		<div id="cabecalho">
+			<img src="assets/images/LOGO.png" id="logo"/>
+			<h1 id="nomePG">ArchiveShield</h1>
+			<h2 id="subtituloPG">Compartilhando o Mundo</h2>
+		</div>
+		<div id="menuBG"></div>
+		<div id="feed">
+			<div id="login">
+				<h3 id="entrar">ENTRAR</h3>
+				<form action="http://localhost/arquiveshield/processar_login.php" method="POST">
+					<input type="text" placeholder="e-mail" name="emailL"></input>
+					<input type="password" placeholder="senha" name="senhaL"></input>
+					<p id="recuperarS">Esqueceu a senha? Clique aqui!</p>
+					<button type="submit">Fazer Login</button>
+				</form>
+			</div>
+			<div id="cadastro">
+				<h3 id="cadastrar">CADASTRAR</h3>
+				<form action="http://localhost/arquiveshield/processar_cadastro.php" method="POST">
+					<input type="text" placeholder="e-mail" name="emailC"><br>
+					<input type="radio" name="tipoDeConta" value="Instituição">Instituição
+					<input type="radio" name="tipoDeConta" value="Usuário">Usuário<br>
+					<input type="text" placeholder="nome" name="nomeC">
+					<input type="password" placeholder="senha" name="senhaC">
+					<input type="password" placeholder="repita a senha" name="senhaCR"><br>
+					<button type="submit">Cadastrar</button>
+				</form>
+			</div>
+		</div>
+		</script>
+	</body>
+</html>
